@@ -1,8 +1,12 @@
-import Post from './components/Post.jsx'
+import PostList from './components/PostList';
 
 function App(){
-  return <Post />;
-  <h1>Hello World!</h1>;
+
+  return (
+  <main>
+    <PostList/>
+  </main>
+  );
 }
 
 export default App;
