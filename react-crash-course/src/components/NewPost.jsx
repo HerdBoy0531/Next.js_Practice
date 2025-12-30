@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import classes from './NewPost.module.css';
 
-function NewPost({onCancel}){
+function NewPost({onCancel, onAddPost}){
   // document.querySelector('textarea').addEventListener('change', function () {})
 
   // stateData[0] // current value
@@ -25,6 +25,7 @@ function NewPost({onCancel}){
       author: enteredAuthor
     };
     console.log(postData);
+    onAddPost(postData)
     onCancel();
   }
 
@@ -36,7 +37,7 @@ function NewPost({onCancel}){
       </p>
       {/* <p>{enterBody}</p> */}
       <p>
-        <label htmlFor="name"> Text</label>
+        <label htmlFor="name"> Your Name</label>
         <input type="text" id="name" required onChange={authorChangeHandler} />
       </p>
       <p className={classes.actions}>
